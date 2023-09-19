@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  list-style-type: none;
+  -webkit-text-decoration: black;
+          text-decoration: black;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height: 4em;
+  border-bottom: solid 2px rgba(128, 128, 128, 0.479);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 1.5em;
+  padding-left: 2em;
+}
+header form input {
+  width: 400px;
+  height: 40px;
+  font-weight: bold;
+  padding-left: 1em;
+  border-radius: 0.5em;
+  border: solid rgba(128, 128, 128, 0.479) 1px;
+}
+header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 2em;
+  margin-right: 2em;
+}
+
+main .contenedor {
+  width: 100vw;
+  background-color: rgba(128, 128, 128, 0.1);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(30, 30px);
+}
+main .contenedor .perfiles {
+  background-color: white;
+  width: 510px;
+  height: 5em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: solid 2px rgba(128, 128, 128, 0.479);
+  display: flex;
+  grid-column: 2/8;
+  grid-row: 2/4;
+  gap: 0.7em;
+}
+main .contenedor .perfiles img {
+  border-radius: 3em;
+}
+main .contenedor .publicacion {
+  grid-column: 2/6;
+  grid-row: 6/29;
+  border-radius: 1em;
+  border: solid 2px rgba(128, 128, 128, 0.479);
+}
+main .contenedor .publicacion .nombre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 2px rgba(128, 128, 128, 0.479);
+}
+main .contenedor .publicacion .nombre .bx-dots-horizontal-rounded {
+  padding-right: 1em;
+  font-size: 2em;
+}
+main .contenedor .publicacion .nombre .nombre-perfil {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+main .contenedor .publicacion .nombre .nombre-perfil img {
+  border-radius: 3em;
+  margin-left: 1em;
+}
+main .contenedor .publicacion .imagen {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contenedor .publicacion .imagen img {
+  width: 450px;
+  height: 450px;
+}
+main .contenedor .publicacion .iconos {
+  font-size: 30px;
+  padding-left: 1.5em;
+}
+main .contenedor .publicacion .comentarios {
+  padding-left: 5em;
+  font-size: 10px;
+}
+main .contenedor .publicacion .comentarios .gray {
+  color: rgba(128, 128, 128, 0.6);
+}
+main .contenedor .publicacion .comentarios span {
+  color: black;
+  font-weight: bold;
+}
+main .contenedor .cuentas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 9/12;
+  grid-row: 2/4;
+  font-size: 13px;
+}
+main .contenedor .cuentas a {
+  color: #1ca0f6;
+}
+main .contenedor .cuentas .flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 13px;
+}
+main .contenedor .cuentas .flex img {
+  border-radius: 3em;
+}
+main .contenedor .cuentas .flex .cuenta-perfil p {
+  color: black;
+  font-weight: bold;
+}
+main .contenedor .cuentas .flex .cuenta-perfil span {
+  color: rgba(128, 128, 128, 0.6);
+}
+main .contenedor .sugerencias {
+  grid-column: 9/11;
+  grid-row: 7/9;
+}
+main .contenedor .sugerencias p {
+  padding-bottom: 15px;
+  font-size: 13px;
+  font-weight: bold;
+  color: rgba(128, 128, 128, 0.6);
+}
+main .contenedor .sugerencias .cuentas-sugeridas {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .contenedor .sugerencias .cuentas-sugeridas .jg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .contenedor .sugerencias .cuentas-sugeridas .jg a {
+  color: #1ca0f6;
+}
+main .contenedor .sugerencias .cuentas-sugeridas .jg .jg-perfil {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+main .contenedor .sugerencias .cuentas-sugeridas .jg .jg-perfil img {
+  border-radius: 3em;
+}
+main .contenedor .sugerencias .cuentas-sugeridas .jg .jg-perfil p {
+  color: black;
+  font-weight: bold;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+}
+footer p {
+  color: white;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  header form input {
+    display: none;
+  }
+  main .contenedor {
+    width: 100vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(29, 30px);
+  }
+  main .contenedor .perfiles {
+    width: 100%;
+    grid-column: 1/5;
+    grid-row: 2/2;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+  }
+  main .contenedor .perfiles .none {
+    display: none;
+  }
+  main .contenedor .publicacion {
+    width: 100%;
+    grid-column: 1/5;
+    grid-row: 5/29;
+  }
+  main .contenedor .publicacion .imagen img {
+    width: 360px;
+    height: 450px;
+  }
+  main .contenedor .publicacion .iconos {
+    padding-left: 0.5em;
+  }
+  main .contenedor .publicacion .comentarios {
+    padding-left: 2em;
+  }
+  main .contenedor .cuentas {
+    display: none;
+  }
+  main .contenedor .sugerencias {
+    display: none;
+  }
+  footer {
+    width: 100%;
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=styles.css.map */
